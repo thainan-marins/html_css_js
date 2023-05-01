@@ -8,11 +8,30 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <script>
-        var vrf = prompt('Digite qual quer coisa e vou dizer\nse é um número ou não!')
-        var res = typeof(vrf) == Number?'Sim!':'Não!'
-        document.write(typeof(vrf))
-        document.write(`<h2>Você digitou "${vrf}"<br> Computador, isso é um número?<br> ${res}`)
-    </script>
+<!-- Este é um exercício pra testar o tipo de uma string, se é um número ou não.-->
+<form action="">
+    <!-- Fazemos um input e um form normalmente como se fossemos pegar iformações de texto.-->
+    <h1>Teste de Tipos</h1>
+    <h2>Digite algo e irei dizer se é ou não um número</h2> 
+    <input type="text" id="per" name="name" >
+    <!-- Colocamos a função no botão, pois queremos que a ação seja disparada apenas quando o usuário já tiver digitado tudo o que queria da barra.-->
+    <input type="button" name="enviar" id="env" value="Enviar" onclick="testar()">
+    <h3 id="h3"></h3>
+</form>
+<script>
+    function testar(){    
+        // Para poder manipular os dados contidos nos inputs, colocamos eles em variáveis.
+        var info = document.getElementById('per')
+        var res = document.getElementById('h3')
+        // Naturalmente, todos os dados que vem de um input são uma string e para poder fazer a verificação precisamos converte-los.
+        var val = Number(info.value)
+        // Criamos uma condição composta, mas poderia ser uma simples também, o intuito principal é mostrar ao usuário se o que ele digitou foi válido ou não.
+        if (val >= 0){
+            res.innerHTML = `Sim, isso é um número!`
+        }    
+        else
+            res.innerHTML = `Não, isso não é um número`
+    }
+</script>
 </body>
 </html>
