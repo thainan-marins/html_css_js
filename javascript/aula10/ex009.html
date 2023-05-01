@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Somando Números</title>
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+        }
+        form{
+            text-align: center;
+            margin-top: 100px;
+        }
+        input#num1, input#num2{
+            width: 105px;
+        }
+    </style>
+</head>
+<body>
+<form action="" id="form1" >
+    <h1>Somando Números</h1>
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2">
+    <input type="button" name="bt1" id="bt1" value="Somar" onclick="somar()">
+    <h2 id="resu">Resultado: </h2>
+</form>
+<script>
+    function somar(){
+    var n1 = document.getElementById('num1')
+    var n2 = document.getElementById('num2')
+    var tra1 = Number(n1.value)
+    var tra2 = Number(n2.value)
+    var s = tra1 + tra2
+    var res = document.getElementById('resu')
+    res.innerHTML = `A soma entre o número ${tra1} e ${tra2} é igual a ${s}.`
+    }
+</script>
+</body>
+</html>

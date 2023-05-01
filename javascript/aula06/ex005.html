@@ -5,25 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dissecando uma variável</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <style>
-        body{
-            background-color: rgb(138, 224, 138);
-        }
-        h2{
-            text-align: center;
-            color: grey;
-            font-size: 50pt;
-            margin-top: 150px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-shadow: 0.5px 0.5px 1px black;
-        }
-    </style>
     <script>
         var vrf = prompt('Digite qual quer coisa e vou dizer\nse é um número ou não!')
-
-        document.write(`<h2>Você digitou "${vrf}"\n e isto...<br><span style="color: red">não é um número!</span> </h2`)
+        var res = typeof(vrf) == Number?'Sim!':'Não!'
+        document.write(typeof(vrf))
+        document.write(`<h2>Você digitou "${vrf}"<br> Computador, isso é um número?<br> ${res}`)
     </script>
 </body>
 </html>
