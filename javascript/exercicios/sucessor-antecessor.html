@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../html-css/aula02-favicon/ex001/favicon2.ico" type="image/x-icon">
+    <title>Calculasts</title>
+    <style>
+        body{
+            text-align: left;
+            margin: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Número Sucessor e Antecessor</h1>
+    <form action="" id="cal">
+        <input type="number" name="number" id="num">
+        <input type="button" name="button" id="but" value="Calcular" onclick="calcular()">
+    </form>
+    <h2>Resultado:</h2>
+    <p id="resp"></p>
+    <script>
+        function calcular(){
+        var per = window.document.getElementById('num')
+        var resp = window.document.getElementById('resp')
+        var val = Number(per.value)
+        var suc = val +1 
+        var ant = val -1
+        resp.innerHTML = `Você digitou o número <strong>${val}</strong>, seu Sucessor é <strong>${suc}</strong> e seu Antecessor é <strong>${ant}</strong>.`
+        }
+    </script>
+</body>
+</html>
